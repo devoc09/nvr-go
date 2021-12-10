@@ -3,5 +3,6 @@ package main
 import "os"
 
 func main() {
-	os.Exit()
+	c := &CLI{outStream: os.Stdout, errStream: os.Stderr}
+	os.Exit(c.Run(os.Args))
 }
